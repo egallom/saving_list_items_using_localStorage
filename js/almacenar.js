@@ -3,7 +3,7 @@ let container = document.getElementById("contenedor");
 let clearButton = document.getElementById("limpiar");
 
 // Función para agregar un nuevo ítem al listado
-const agregarItem = () => {
+const AGREGAR_ITEM = () => {
   let inputValue = document.getElementById("item").value;
 
   if (inputValue.trim() !== "") {
@@ -31,7 +31,7 @@ const agregarItem = () => {
 };
 
 // Función para limpiar el listado almacenado y actualizar la vista
-const limpiarListado = () => {
+const LIMPIAR_LISTADO = () => {
   // Limpiar el almacenamiento local
   localStorage.removeItem("data");
 
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Agregar evento al botón de Agregar
-add.addEventListener("click", agregarItem);
+add.addEventListener("click", AGREGAR_ITEM);
 
 // Agregar evento al botón de Limpiar
-clearButton.addEventListener("click", limpiarListado);
+clearButton.addEventListener("click", LIMPIAR_LISTADO);
